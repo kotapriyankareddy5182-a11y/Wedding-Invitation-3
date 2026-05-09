@@ -1,82 +1,76 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import SectionDivider from './SectionDivider';
+import { Clock } from 'lucide-react';
 
-const WEDDING_DATE = new Date('2026-03-24T00:00:00');
+const WEDDING_DATE = new Date('2026-02-25T09:00:00');
 
-function CountdownDigit({ value, label }) {
+function getTimeLeft() {
+  const now = new Date();
+  const diff = WEDDING_DATE - now;
+  if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 };
+  return {
+    days: Math.floor(diff / (1000 * 60 * 60 * 24)),
+    hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
+    minutes: Math.floor((diff / (1000 * 60)) % 60),
+    seconds: Math.floor((diff / 1000) % 60),
+  };
+}
+
+function TimeUnit({ value, label }) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="flex flex-col items-center"
-    >
-      <div className="relative group">
-        <div className="absolute -inset-2 bg-primary/10 rounded-xl blur-lg opacity-50 group-hover:opacity-80 transition-opacity" />
-        <div className="relative glass-card rounded-xl w-16 h-20 md:w-24 md:h-28 flex items-center justify-center">
-          <span className="font-playfair text-3xl md:text-5xl text-primary text-glow-strong font-bold">
-            {String(value).padStart(2, '0')}
-          </span>
-        </div>
+    <div className="text-center">
+      <div className="w-20 h-20 md:w-28 md:h-28 rounded-lg flex items-center justify-center border border-primary/30"
+        style={{ background: 'hsl(345 52% 12%)', boxShadow: '0 0 20px hsl(43 80% 40% / 0.15)' }}
+      >
+        <span className="font-title text-3xl md:text-5xl font-bold"
+          style={{ color: 'hsl(43 80% 62%)' }}
+        >
+          {String(value).padStart(2, '0')}
+        </span>
       </div>
-      <p className="font-cormorant text-muted-foreground text-xs md:text-sm tracking-[0.3em] uppercase mt-3">
-        {label}
-      </p>
-    </motion.div>
+      <p className="font-title text-primary/60 text-xs tracking-[0.35em] uppercase mt-3">{label}</p>
+    </div>
   );
 }
 
 export default function CountdownSection() {
-  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [timeLeft, setTimeLeft] = useState(getTimeLeft());
 
   useEffect(() => {
-    const calculateTime = () => {
-      const diff = WEDDING_DATE.getTime() - Date.now();
-      if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 };
-      return {
-        days: Math.floor(diff / (1000 * 60 * 60 * 24)),
-        hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
-        minutes: Math.floor((diff / (1000 * 60)) % 60),
-        seconds: Math.floor((diff / 1000) % 60),
-      };
-    };
-
-    setTimeLeft(calculateTime());
-    const timer = setInterval(() => setTimeLeft(calculateTime()), 1000);
-    return () => clearInterval(timer);
+    const interval = setInterval(() => setTimeLeft(getTimeLeft()), 1000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="relative py-24 md:py-32 px-4 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-secondary/20 to-background" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-primary/5 rounded-full blur-[120px]" />
-
-      <div className="relative z-10 max-w-3xl mx-auto text-center">
+    <section className="py-20 md:py-28 bg-secondary/30">
+      <div className="max-w-4xl mx-auto px-4 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 1 }}
         >
-          <p className="font-cormorant text-primary/60 text-xs md:text-sm tracking-[0.5em] uppercase mb-3">
-            Counting Every Moment
-          </p>
-          <h2 className="font-playfair text-3xl md:text-5xl text-foreground text-glow mb-4">
-            Until We Say "I Do"
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <Clock className="w-4 h-4 text-primary" />
+            <p className="font-title text-primary/70 text-xs tracking-[0.5em] uppercase">Counting Down To</p>
+          </div>
+          <h2 className="font-title text-4xl md:text-6xl font-bold mb-12"
+            style={{ color: 'hsl(43 80% 58%)', textShadow: '0 2px 16px hsl(43 80% 40% / 0.4)' }}
+          >
+            The Big Day
           </h2>
-          <SectionDivider />
-        </motion.div>
 
-        <div className="flex items-center justify-center gap-4 md:gap-8 mt-12">
-          <CountdownDigit value={timeLeft.days} label="Days" />
-          <span className="font-vibes text-3xl text-primary/30 mt-[-20px]">:</span>
-          <CountdownDigit value={timeLeft.hours} label="Hours" />
-          <span className="font-vibes text-3xl text-primary/30 mt-[-20px]">:</span>
-          <CountdownDigit value={timeLeft.minutes} label="Minutes" />
-          <span className="font-vibes text-3xl text-primary/30 mt-[-20px]">:</span>
-          <CountdownDigit value={timeLeft.seconds} label="Seconds" />
-        </div>
+          <div className="flex justify-center gap-4 md:gap-8">
+            <TimeUnit value={timeLeft.days} label="Days" />
+            <TimeUnit value={timeLeft.hours} label="Hours" />
+            <TimeUnit value={timeLeft.minutes} label="Minutes" />
+            <TimeUnit value={timeLeft.seconds} label="Seconds" />
+          </div>
+
+          <p className="font-body text-primary/55 text-sm mt-10">
+            February 25, 2026 · Sita Rama Kalyana Mandapam, Giddalur
+          </p>
+        </motion.div>
       </div>
     </section>
   );

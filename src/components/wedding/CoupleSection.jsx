@@ -1,72 +1,103 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import CircleFrame from './CircleFrame';
-import SectionDivider from './SectionDivider';
 
-const GROOM_IMAGE = "/images/groom.jpg";
-const BRIDE_IMAGE = "/images/bride.jpg";
+const BRIDE_IMG = "https://media.base44.com/images/public/69fedcc55e753ef411990907/f2a2061bb_generated_abbb2dba.png";
+const GROOM_IMG = "https://media.base44.com/images/public/69fedcc55e753ef411990907/c45c43c0f_generated_05195fba.png";
+
+const goldGradient = 'linear-gradient(135deg, hsl(43 85% 65%), hsl(43 60% 45%))';
 
 export default function CoupleSection() {
   return (
-    <section className="relative py-24 md:py-32 px-4 overflow-hidden">
-      {/* Background glow */}
-      <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[120px]" />
-      <div className="absolute top-1/2 right-1/4 w-[400px] h-[400px] bg-primary/5 rounded-full blur-[120px]" />
+    <section className="relative py-20 md:py-32 bg-background overflow-hidden">
+      {/* top ornament line */}
+      <div className="absolute top-0 left-0 right-0 flex items-center px-4">
+        <div className="flex-1 h-px" style={{ background: goldGradient }} />
+        <span className="mx-4 text-primary text-xl">✦</span>
+        <div className="flex-1 h-px" style={{ background: goldGradient }} />
+      </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16 md:mb-20"
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 1 }}
+          className="text-center mb-16"
         >
-          <p className="font-cormorant text-primary/60 text-xs md:text-sm tracking-[0.5em] uppercase mb-3">
-            Together Forever
-          </p>
-          <h2 className="font-playfair text-3xl md:text-5xl text-foreground text-glow mb-4">
-            The Couple
+          <p className="font-title text-primary/70 text-xs tracking-[0.5em] uppercase mb-3">Together with their families</p>
+          <h2 className="font-title text-4xl md:text-6xl font-bold"
+            style={{ color: 'hsl(43 80% 58%)', textShadow: '0 2px 16px hsl(43 80% 40% / 0.4)' }}
+          >
+            The Bride &amp; Groom
           </h2>
-          <p className="font-cormorant text-muted-foreground text-base md:text-lg italic max-w-md mx-auto">
-            Two families, many traditions, one timeless celebration
-          </p>
-          <SectionDivider />
+          <div className="flex items-center justify-center gap-3 mt-4">
+            <div className="w-16 h-px bg-primary/50" />
+            <span className="text-primary text-lg">✦</span>
+            <div className="w-16 h-px bg-primary/50" />
+          </div>
         </motion.div>
 
-        <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-20 lg:gap-28">
-          <CircleFrame
-            imageUrl={GROOM_IMAGE}
-            name="Ashok"
-            label="The Groom"
-            parents="S/o Ankiteddy & Lakshmi Devi"
-            delay={0.1}
-            imagePosition="object-[center_15%]"
-          />
-
-          {/* Center decoration */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+          {/* Bride */}
           <motion.div
-            initial={{ opacity: 0, scale: 0 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="hidden md:flex flex-col items-center"
+            initial={{ opacity: 0, x: -60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1 }}
+            className="text-center"
           >
-            <div className="w-px h-16 bg-gradient-to-b from-transparent via-primary/30 to-transparent" />
-            <div className="my-4 relative">
-              <div className="absolute -inset-4 bg-primary/10 rounded-full blur-lg animate-pulse-glow" />
-              <span className="font-vibes text-4xl text-primary text-glow relative">&amp;</span>
+            <div className="relative inline-block mb-6">
+              <div className="absolute -inset-3 rounded-full border-2 border-primary/40" />
+              <div className="absolute -inset-6 rounded-full border border-primary/15" />
+              <img
+                src={BRIDE_IMG}
+                alt="Bride Pooja in traditional Telugu wedding attire"
+                className="w-52 h-52 md:w-64 md:h-64 object-cover rounded-full"
+                style={{ boxShadow: '0 0 48px hsl(43 80% 50% / 0.25)' }}
+              />
             </div>
-            <div className="w-px h-16 bg-gradient-to-b from-transparent via-primary/30 to-transparent" />
+            <h3 className="font-title text-3xl md:text-5xl font-bold mb-2"
+              style={{ color: 'hsl(43 80% 62%)' }}
+            >Pooja</h3>
+            <p className="font-body text-primary/60 text-sm tracking-wider">Daughter of</p>
+            <p className="font-body text-primary/80 text-base mt-1">
+              Sri Ramakrishna Reddy &amp; Smt. Srikala
+            </p>
           </motion.div>
 
-          <CircleFrame
-            imageUrl={BRIDE_IMAGE}
-            name="Pooja"
-            label="The Bride"
-            parents="D/o Rama Krishna Reddy & Srikala"
-            delay={0.3}
-          />
+          {/* Groom */}
+          <motion.div
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1 }}
+            className="text-center"
+          >
+            <div className="relative inline-block mb-6">
+              <div className="absolute -inset-3 rounded-full border-2 border-primary/40" />
+              <div className="absolute -inset-6 rounded-full border border-primary/15" />
+              <img
+                src={GROOM_IMG}
+                alt="Groom Ashok in traditional Telugu wedding attire"
+                className="w-52 h-52 md:w-64 md:h-64 object-cover rounded-full"
+                style={{ boxShadow: '0 0 48px hsl(43 80% 50% / 0.25)' }}
+              />
+            </div>
+            <h3 className="font-title text-3xl md:text-5xl font-bold mb-2"
+              style={{ color: 'hsl(43 80% 62%)' }}
+            >Ashok</h3>
+            <p className="font-body text-primary/60 text-sm tracking-wider">Son of</p>
+            <p className="font-body text-primary/80 text-base mt-1">
+              Sri Ankireddy &amp; Smt. Lakshmi Devi
+            </p>
+          </motion.div>
         </div>
+      </div>
+
+      <div className="absolute bottom-0 left-0 right-0 flex items-center px-4">
+        <div className="flex-1 h-px" style={{ background: goldGradient }} />
+        <span className="mx-4 text-primary text-xl">✦</span>
+        <div className="flex-1 h-px" style={{ background: goldGradient }} />
       </div>
     </section>
   );

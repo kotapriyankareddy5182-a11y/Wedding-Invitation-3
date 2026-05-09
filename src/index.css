@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cinzel:wght@400;600;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,62 +6,85 @@
 
 @layer base {
   :root {
-    --background: 270 60% 5%;
-    --foreground: 40 50% 95%;
-    --card: 270 40% 10%;
-    --card-foreground: 40 50% 95%;
-    --popover: 270 40% 10%;
-    --popover-foreground: 40 50% 95%;
-    --primary: 53 100% 80%;
-    --primary-foreground: 270 60% 5%;
-    --secondary: 270 50% 15%;
-    --secondary-foreground: 40 50% 95%;
-    --muted: 270 30% 15%;
-    --muted-foreground: 40 20% 65%;
-    --accent: 350 80% 25%;
-    --accent-foreground: 40 50% 95%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 43 50% 30%;
-    --input: 270 30% 18%;
-    --ring: 53 100% 80%;
-    --chart-1: 53 100% 80%;
-    --chart-2: 350 80% 25%;
-    --chart-3: 270 50% 30%;
-    --chart-4: 40 50% 70%;
-    --chart-5: 270 30% 40%;
-    --radius: 0.75rem;
+    /* Background: deep grape wine / maroon */
+    --background: 345 58% 9%;
+    /* Foreground: GOLD only — no white */
+    --foreground: 43 75% 62%;
+    /* Card: slightly lighter maroon */
+    --card: 345 52% 12%;
+    --card-foreground: 43 75% 62%;
+    --popover: 345 52% 12%;
+    --popover-foreground: 43 75% 62%;
+    /* Primary: bright burnished gold */
+    --primary: 43 80% 58%;
+    --primary-foreground: 345 58% 9%;
+    /* Secondary: mid maroon */
+    --secondary: 345 45% 17%;
+    --secondary-foreground: 43 75% 62%;
+    /* Muted: dim gold */
+    --muted: 345 38% 18%;
+    --muted-foreground: 43 50% 52%;
+    /* Accent: deep wine */
+    --accent: 345 62% 20%;
+    --accent-foreground: 43 75% 62%;
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 43 75% 62%;
+    --border: 43 55% 38%;
+    --input: 345 42% 20%;
+    --ring: 43 80% 58%;
+    --chart-1: 43 80% 58%;
+    --chart-2: 345 55% 18%;
+    --chart-3: 345 60% 30%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 345 58% 7%;
+    --sidebar-foreground: 43 75% 62%;
+    --sidebar-primary: 43 80% 58%;
+    --sidebar-primary-foreground: 345 58% 9%;
+    --sidebar-accent: 345 45% 17%;
+    --sidebar-accent-foreground: 43 75% 62%;
+    --sidebar-border: 43 55% 28%;
+    --sidebar-ring: 43 80% 58%;
 
-    --font-playfair: 'Playfair Display', serif;
-    --font-vibes: 'Great Vibes', cursive;
-    --font-cormorant: 'Cormorant Garamond', serif;
+    --font-display: 'Playfair Display', serif;
+    --font-body: 'EB Garamond', serif;
+    --font-title: 'Cinzel', serif;
   }
 
   .dark {
-    --background: 270 60% 5%;
-    --foreground: 40 50% 95%;
-    --card: 270 40% 10%;
-    --card-foreground: 40 50% 95%;
-    --popover: 270 40% 10%;
-    --popover-foreground: 40 50% 95%;
-    --primary: 53 100% 80%;
-    --primary-foreground: 270 60% 5%;
-    --secondary: 270 50% 15%;
-    --secondary-foreground: 40 50% 95%;
-    --muted: 270 30% 15%;
-    --muted-foreground: 40 20% 65%;
-    --accent: 350 80% 25%;
-    --accent-foreground: 40 50% 95%;
+    --background: 345 58% 7%;
+    --foreground: 43 75% 62%;
+    --card: 345 50% 11%;
+    --card-foreground: 43 72% 82%;
+    --popover: 345 50% 11%;
+    --popover-foreground: 43 72% 82%;
+    --primary: 43 70% 55%;
+    --primary-foreground: 345 55% 8%;
+    --secondary: 345 45% 15%;
+    --secondary-foreground: 43 72% 82%;
+    --muted: 345 35% 16%;
+    --muted-foreground: 43 30% 58%;
+    --accent: 345 60% 18%;
+    --accent-foreground: 43 72% 82%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     --border: 43 50% 30%;
-    --input: 270 30% 18%;
-    --ring: 53 100% 80%;
-    --chart-1: 53 100% 80%;
-    --chart-2: 350 80% 25%;
-    --chart-3: 270 50% 30%;
-    --chart-4: 40 50% 70%;
-    --chart-5: 270 30% 40%;
+    --input: 345 40% 18%;
+    --ring: 43 70% 55%;
+    --chart-1: 43 70% 55%;
+    --chart-2: 345 55% 18%;
+    --chart-3: 345 60% 30%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --sidebar-background: 345 55% 7%;
+    --sidebar-foreground: 43 72% 82%;
+    --sidebar-primary: 43 70% 55%;
+    --sidebar-primary-foreground: 345 55% 8%;
+    --sidebar-accent: 345 45% 14%;
+    --sidebar-accent-foreground: 43 72% 82%;
+    --sidebar-border: 43 50% 25%;
+    --sidebar-ring: 43 70% 55%;
   }
 }
 
@@ -73,10 +96,6 @@
   body {
     @apply bg-background text-foreground;
   }
-
-  html {
-    scroll-behavior: smooth;
-  }
 }
 
 /* Custom scrollbar */
@@ -85,82 +104,10 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(270, 60%, 5%);
+  background: hsl(345 55% 8%);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(53, 100%, 80%);
+  background: hsl(43 70% 55%);
   border-radius: 3px;
-}
-
-/* Golden glow text */
-.text-glow {
-  text-shadow: 0 0 20px hsla(53, 100%, 80%, 0.4), 0 0 40px hsla(53, 100%, 80%, 0.2);
-}
-
-.text-glow-strong {
-  text-shadow: 0 0 10px hsla(53, 100%, 80%, 0.6), 0 0 30px hsla(53, 100%, 80%, 0.4), 0 0 60px hsla(53, 100%, 80%, 0.2);
-}
-
-/* Arch clip path */
-.arch-clip {
-  clip-path: ellipse(50% 100% at 50% 100%);
-}
-
-/* Floating particles */
-@keyframes float {
-
-  0%,
-  100% {
-    transform: translateY(0) translateX(0);
-    opacity: 0;
-  }
-
-  10% {
-    opacity: 1;
-  }
-
-  90% {
-    opacity: 1;
-  }
-
-  100% {
-    transform: translateY(-100vh) translateX(20px);
-    opacity: 0;
-  }
-}
-
-@keyframes pulse-glow {
-
-  0%,
-  100% {
-    opacity: 0.3;
-  }
-
-  50% {
-    opacity: 0.8;
-  }
-}
-
-.animate-float {
-  animation: float linear infinite;
-}
-
-.animate-pulse-glow {
-  animation: pulse-glow 3s ease-in-out infinite;
-}
-
-/* Glassmorphism */
-.glass {
-  background: rgba(45, 10, 78, 0.3);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 243, 154, 0.2);
-}
-
-.glass-card {
-  background: linear-gradient(135deg, rgba(45, 10, 78, 0.4), rgba(107, 15, 26, 0.2));
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 243, 154, 0.25);
 }
