@@ -165,7 +165,7 @@ export default function Wedding() {
 
       {/* ═══════════════ HERO ═══════════════ */}
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4"
-        style={{ background: `radial-gradient(ellipse 80% 70% at 50% 50%, #2d0f1e 0%, ${bg} 100%)` }}>
+        style={{ background: `radial-gradient(ellipse 80% 70% at 50% 50%, #571147 0%, ${bg} 100%)` }}>
         {/* geometric lines */}
         <div className="absolute inset-0 opacity-10 pointer-events-none" style={{
           backgroundImage: `repeating-linear-gradient(45deg, ${gold} 0, ${gold} 1px, transparent 0, transparent 50%)`,
@@ -193,8 +193,8 @@ export default function Wedding() {
         {/* Names in script */}
         <motion.div initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 1.4, duration: 1.2 }} className="text-center z-10 my-2">
-          <h1 style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic', fontSize: 'clamp(52px,12vw,110px)', fontWeight: 400, color: gold, textShadow: `0 2px 30px rgba(212,175,55,0.5)`, lineHeight: 1.1 }}>
-            Pooja<span style={{ fontWeight: 300 }}> &amp; </span>Ashok
+          <h1 style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic', fontSize: 'clamp(52px,12vw,110px)', fontWeight: 400, color: cream, textShadow: `0 2px 30px rgba(243,235,225,0.3)`, lineHeight: 1.1 }}>
+            Pooja<span style={{ fontWeight: 300, color: gold }}> &amp; </span>Ashok
           </h1>
         </motion.div>
 
@@ -236,7 +236,7 @@ export default function Wedding() {
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
 
             {/* ═══════════════ THE COUPLE ═══════════════ */}
-            <section ref={coupleRef} className="py-20 px-4">
+            <section ref={coupleRef} className="py-20 px-4" style={{ background: cardBg }}>
               <div className="max-w-5xl mx-auto">
                 <div className="text-center mb-14">
                   <p style={subLabel} className="mb-8">The Couple</p>
@@ -527,8 +527,8 @@ export default function Wedding() {
 
             {/* ═══════════════ FOOTER ═══════════════ */}
             <footer className="py-12 text-center px-4" style={{ background: 'rgba(0,0,0,0.5)', borderTop: `1px solid ${goldDim}` }}>
-              <p style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic', fontSize: 36, color: gold }}>Pooja &amp; Ashok</p>
-              <p className="mt-2" style={{ color: goldDim, fontFamily: "'Cinzel', serif", fontSize: 11, letterSpacing: '0.3em' }}>
+              <p style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic', fontSize: 36, color: cream }}>Pooja <span style={{ color: gold }}>&amp;</span> Ashok</p>
+              <p className="mt-2" style={{ color: cream, fontFamily: "'Cinzel', serif", fontSize: 11, letterSpacing: '0.3em' }}>
                 25 FEBRUARY 2026 · GIDDALUR, PRAKASAM DISTRICT
               </p>
               <div style={{ height: 1, background: goldDim, maxWidth: 200, margin: '16px auto' }} />
