@@ -237,7 +237,7 @@ export default function Wedding() {
           <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
 
             {/* ═══════════════ THE COUPLE ═══════════════ */}
-            <section ref={coupleRef} className="py-20 px-4" style={{ background: cardBg }}>
+            <section ref={coupleRef} className="py-20 px-4">
               <div className="max-w-5xl mx-auto">
                 <div className="text-center mb-14">
                   <p style={subLabel} className="mb-8">The Couple</p>
