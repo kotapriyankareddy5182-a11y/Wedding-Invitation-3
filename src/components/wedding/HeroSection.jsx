@@ -27,7 +27,7 @@ export default function HeroSection({ onOpenInvitation }) {
         <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-background">
             {/* Subtle radial glow */}
             <div className="absolute inset-0 pointer-events-none"
-                style={{ background: 'radial-gradient(ellipse 70% 60% at 50% 50%, hsl(345 50% 14%) 0%, hsl(345 58% 8%) 100%)' }}
+                style={{ background: 'radial-gradient(ellipse 70% 60% at 50% 50%, hsl(325 50% 14%) 0%, hsl(325 58% 8%) 100%)' }}
             />
 
             {/* Gold corner ornaments */}
@@ -83,7 +83,7 @@ export default function HeroSection({ onOpenInvitation }) {
                                 alt="Royal ceremonial elephant"
                                 className="w-full object-contain"
                                 style={{
-                                    filter: 'drop-shadow(0 4px 18px hsl(43 80% 40% / 0.25))',
+                                    filter: 'drop-shadow(0 4px 18px hsl(var(--primary) / 0.25))',
                                     clipPath: 'inset(0 50% 0 0)',
                                     transform: 'scaleX(-1)',
                                 }}
@@ -102,13 +102,13 @@ export default function HeroSection({ onOpenInvitation }) {
                             className="text-center px-6 pb-4"
                         >
                             <h1 className="font-title text-5xl md:text-8xl lg:text-9xl font-bold leading-tight"
-                                style={{ color: 'hsl(43 80% 58%)', textShadow: '0 2px 24px hsl(43 80% 40% / 0.5)' }}
+                                style={{ color: 'hsl(var(--foreground))', textShadow: '0 2px 24px hsl(var(--foreground) / 0.5)' }}
                             >
                                 Pooja
                             </h1>
                             <p className="font-display italic text-primary text-3xl md:text-5xl my-1">&amp;</p>
                             <h1 className="font-title text-5xl md:text-8xl lg:text-9xl font-bold leading-tight"
-                                style={{ color: 'hsl(43 80% 58%)', textShadow: '0 2px 24px hsl(43 80% 40% / 0.5)' }}
+                                style={{ color: 'hsl(var(--foreground))', textShadow: '0 2px 24px hsl(var(--foreground) / 0.5)' }}
                             >
                                 Ashok
                             </h1>
@@ -131,7 +131,7 @@ export default function HeroSection({ onOpenInvitation }) {
                                 alt="Royal ceremonial elephant"
                                 className="w-full object-contain"
                                 style={{
-                                    filter: 'drop-shadow(0 4px 18px hsl(43 80% 40% / 0.25))',
+                                    filter: 'drop-shadow(0 4px 18px hsl(var(--primary) / 0.25))',
                                     clipPath: 'inset(0 0 0 50%)',
                                 }}
                             />
@@ -158,13 +158,13 @@ export default function HeroSection({ onOpenInvitation }) {
                 {!isOpen && (
                     <motion.button
                         onClick={handleOpen}
-                        whileHover={{ scale: 1.05, boxShadow: '0 6px 40px hsl(43 80% 50% / 0.45)' }}
+                        whileHover={{ scale: 1.05, boxShadow: '0 6px 40px hsl(var(--primary) / 0.45)' }}
                         whileTap={{ scale: 0.95 }}
                         className="px-12 py-3.5 font-title text-xs tracking-[0.35em] uppercase rounded-sm transition-all"
                         style={{
                             background: 'linear-gradient(135deg, hsl(43 80% 55%), hsl(43 60% 42%))',
-                            color: 'hsl(345 58% 9%)',
-                            boxShadow: '0 4px 28px hsl(43 80% 40% / 0.35)',
+                            color: 'hsl(var(--background))',
+                            boxShadow: '0 4px 28px hsl(var(--primary) / 0.35)',
                         }}
                     >
                         Open Invitation

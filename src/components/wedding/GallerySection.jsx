@@ -34,7 +34,7 @@ export default function GallerySection() {
             <p className="font-title text-primary/70 text-xs tracking-[0.5em] uppercase">Memories</p>
           </div>
           <h2 className="font-title text-4xl md:text-6xl font-bold"
-            style={{ color: 'hsl(43 80% 58%)', textShadow: '0 2px 16px hsl(43 80% 40% / 0.4)' }}
+            style={{ color: 'hsl(var(--foreground))', textShadow: '0 2px 16px hsl(var(--foreground) / 0.4)' }}
           >
             Captured Moments
           </h2>
@@ -62,7 +62,7 @@ export default function GallerySection() {
               />
               <div className="absolute inset-0 bg-background/0 group-hover:bg-background/20 transition-colors duration-500" />
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg"
-                style={{ boxShadow: 'inset 0 0 40px hsl(43 80% 50% / 0.2)' }}
+                style={{ boxShadow: 'inset 0 0 40px hsl(var(--primary) / 0.2)' }}
               />
             </motion.div>
           ))}

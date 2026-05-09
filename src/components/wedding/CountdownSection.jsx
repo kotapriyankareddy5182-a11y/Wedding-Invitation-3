@@ -20,10 +20,10 @@ function TimeUnit({ value, label }) {
   return (
     <div className="text-center">
       <div className="w-20 h-20 md:w-28 md:h-28 rounded-lg flex items-center justify-center border border-primary/30"
-        style={{ background: 'hsl(345 52% 12%)', boxShadow: '0 0 20px hsl(43 80% 40% / 0.15)' }}
+        style={{ background: 'var(--card-gradient)', boxShadow: '0 0 20px hsl(var(--primary) / 0.15)' }}
       >
         <span className="font-title text-3xl md:text-5xl font-bold"
-          style={{ color: 'hsl(43 80% 62%)' }}
+          style={{ color: 'hsl(var(--primary))' }}
         >
           {String(value).padStart(2, '0')}
         </span>
@@ -55,7 +55,7 @@ export default function CountdownSection() {
             <p className="font-title text-primary/70 text-xs tracking-[0.5em] uppercase">Counting Down To</p>
           </div>
           <h2 className="font-title text-4xl md:text-6xl font-bold mb-12"
-            style={{ color: 'hsl(43 80% 58%)', textShadow: '0 2px 16px hsl(43 80% 40% / 0.4)' }}
+            style={{ color: 'hsl(var(--foreground))', textShadow: '0 2px 16px hsl(var(--foreground) / 0.4)' }}
           >
             The Big Day
           </h2>

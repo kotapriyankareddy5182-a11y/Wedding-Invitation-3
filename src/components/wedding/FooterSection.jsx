@@ -4,11 +4,11 @@ import { Heart } from 'lucide-react';
 export default function FooterSection() {
   return (
     <footer className="py-12 border-t border-primary/20"
-      style={{ background: 'hsl(345 58% 8%)' }}
+      style={{ background: 'hsl(325 58% 8%)' }}
     >
       <div className="max-w-4xl mx-auto px-4 text-center">
         <p className="font-title text-3xl md:text-4xl font-bold mb-3"
-          style={{ color: 'hsl(43 80% 62%)' }}
+          style={{ color: 'hsl(var(--primary))' }}
         >
           Pooja &amp; Ashok
         </p>

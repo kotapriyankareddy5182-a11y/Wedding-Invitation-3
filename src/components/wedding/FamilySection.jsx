@@ -32,7 +32,7 @@ export default function FamilySection() {
         >
           <p className="font-title text-primary/70 text-xs tracking-[0.5em] uppercase mb-3">With Blessings Of</p>
           <h2 className="font-title text-4xl md:text-6xl font-bold"
-            style={{ color: 'hsl(43 80% 58%)', textShadow: '0 2px 16px hsl(43 80% 40% / 0.4)' }}
+            style={{ color: 'hsl(var(--foreground))', textShadow: '0 2px 16px hsl(var(--foreground) / 0.4)' }}
           >
             Our Families
           </h2>
@@ -61,13 +61,13 @@ export default function FamilySection() {
                 {family.parents.map((parent) => (
                   <div key={parent.name}>
                     <div className="w-20 h-20 mx-auto mb-3 rounded-full border-2 border-primary/40 flex items-center justify-center"
-                      style={{ background: 'hsl(345 52% 15%)' }}
+                      style={{ background: 'hsl(325 52% 15%)' }}
                     >
                       <span className="font-title text-primary text-2xl font-bold">
                         {parent.name.split(' ').find(w => w.length > 2)?.[0] ?? parent.name[0]}
                       </span>
                     </div>
-                    <h4 className="font-title text-xl md:text-2xl font-semibold" style={{ color: 'hsl(43 80% 62%)' }}>
+                    <h4 className="font-title text-xl md:text-2xl font-semibold" style={{ color: 'hsl(var(--primary))' }}>
                       {parent.name}
                     </h4>
                     <p className="font-body text-primary/55 text-xs tracking-wider mt-1">{parent.role}</p>

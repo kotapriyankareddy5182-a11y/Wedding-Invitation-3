@@ -26,7 +26,7 @@ export default function CoupleSection() {
         >
           <p className="font-title text-primary/70 text-xs tracking-[0.5em] uppercase mb-3">Together with their families</p>
           <h2 className="font-title text-4xl md:text-6xl font-bold"
-            style={{ color: 'hsl(43 80% 58%)', textShadow: '0 2px 16px hsl(43 80% 40% / 0.4)' }}
+            style={{ color: 'hsl(var(--foreground))', textShadow: '0 2px 16px hsl(var(--foreground) / 0.4)' }}
           >
             The Bride &amp; Groom
           </h2>
@@ -53,11 +53,11 @@ export default function CoupleSection() {
                 src={BRIDE_IMG}
                 alt="Bride Pooja in traditional Telugu wedding attire"
                 className="w-52 h-52 md:w-64 md:h-64 object-cover rounded-full"
-                style={{ boxShadow: '0 0 48px hsl(43 80% 50% / 0.25)' }}
+                style={{ boxShadow: '0 0 48px hsl(var(--primary) / 0.25)' }}
               />
             </div>
             <h3 className="font-title text-3xl md:text-5xl font-bold mb-2"
-              style={{ color: 'hsl(43 80% 62%)' }}
+              style={{ color: 'hsl(var(--foreground))' }}
             >Pooja</h3>
             <p className="font-body text-primary/60 text-sm tracking-wider">Daughter of</p>
             <p className="font-body text-primary/80 text-base mt-1">
@@ -80,11 +80,11 @@ export default function CoupleSection() {
                 src={GROOM_IMG}
                 alt="Groom Ashok in traditional Telugu wedding attire"
                 className="w-52 h-52 md:w-64 md:h-64 object-cover rounded-full"
-                style={{ boxShadow: '0 0 48px hsl(43 80% 50% / 0.25)' }}
+                style={{ boxShadow: '0 0 48px hsl(var(--primary) / 0.25)' }}
               />
             </div>
             <h3 className="font-title text-3xl md:text-5xl font-bold mb-2"
-              style={{ color: 'hsl(43 80% 62%)' }}
+              style={{ color: 'hsl(var(--foreground))' }}
             >Ashok</h3>
             <p className="font-body text-primary/60 text-sm tracking-wider">Son of</p>
             <p className="font-body text-primary/80 text-base mt-1">

@@ -16,7 +16,7 @@ export default function LiveStreamSection() {
           className="text-center mb-14"
         >
           <h2 className="font-title text-4xl md:text-5xl font-bold"
-            style={{ color: 'hsl(43 80% 58%)', textShadow: '0 2px 16px hsl(43 80% 40% / 0.4)' }}
+            style={{ color: 'hsl(var(--foreground))', textShadow: '0 2px 16px hsl(var(--foreground) / 0.4)' }}
           >
             Join the Celebration
           </h2>
@@ -35,22 +35,22 @@ export default function LiveStreamSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center p-8 border border-primary/20 rounded-lg"
-            style={{ background: 'hsl(345 52% 12%)' }}
+            style={{ background: 'var(--card-gradient)' }}
           >
             <div className="w-16 h-16 mx-auto mb-6 rounded-full border border-primary/30 flex items-center justify-center"
-              style={{ background: 'hsl(345 55% 16%)' }}
+              style={{ background: 'hsl(325 55% 16%)' }}
             >
               <Video className="w-7 h-7 text-primary" />
             </div>
             <h3 className="font-title text-2xl md:text-3xl font-bold mb-3"
-              style={{ color: 'hsl(43 80% 62%)' }}
+              style={{ color: 'hsl(var(--foreground))' }}
             >Live Stream</h3>
             <p className="font-body text-primary/60 text-sm mb-6">
               Can't make it? Watch the wedding ceremony live on February 25, 2026
             </p>
             <button
               className="px-8 py-3 font-title text-xs tracking-[0.35em] uppercase rounded-sm border border-primary/40 transition-all hover:bg-primary/10"
-              style={{ color: 'hsl(43 80% 62%)' }}
+              style={{ color: 'hsl(var(--primary))' }}
             >
               <span className="flex items-center gap-2 justify-center">
                 <Video className="w-4 h-4" /> Watch Live
@@ -65,22 +65,22 @@ export default function LiveStreamSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="text-center p-8 border border-primary/20 rounded-lg"
-            style={{ background: 'hsl(345 52% 12%)' }}
+            style={{ background: 'var(--card-gradient)' }}
           >
             <div className="w-16 h-16 mx-auto mb-6 rounded-full border border-primary/30 flex items-center justify-center"
-              style={{ background: 'hsl(345 55% 16%)' }}
+              style={{ background: 'hsl(325 55% 16%)' }}
             >
               <MapPin className="w-7 h-7 text-primary" />
             </div>
             <h3 className="font-title text-2xl md:text-3xl font-bold mb-3"
-              style={{ color: 'hsl(43 80% 62%)' }}
+              style={{ color: 'hsl(var(--foreground))' }}
             >Wedding Venue</h3>
             <p className="font-body text-primary/70 text-sm mb-1">Sita Rama Kalyana Mandapam</p>
             <p className="font-body text-primary/50 text-xs mb-6">Giddalur, Prakasam District</p>
             <a href={mapUrl} target="_blank" rel="noopener noreferrer">
               <button
                 className="px-8 py-3 font-title text-xs tracking-[0.35em] uppercase rounded-sm border border-primary/40 transition-all hover:bg-primary/10"
-                style={{ color: 'hsl(43 80% 62%)' }}
+                style={{ color: 'hsl(var(--primary))' }}
               >
                 <span className="flex items-center gap-2 justify-center">
                   <MapPin className="w-4 h-4" /> Navigate <ExternalLink className="w-3 h-3" />

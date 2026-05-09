@@ -12,9 +12,9 @@ export default function RSVPSection() {
   };
 
   const inputStyle = {
-    background: 'hsl(345 55% 14%)',
+    background: 'hsl(325 55% 14%)',
     border: '1px solid hsl(43 50% 35%)',
-    color: 'hsl(43 80% 62%)',
+    color: 'hsl(var(--primary))',
     borderRadius: '4px',
     padding: '10px 14px',
     width: '100%',
@@ -35,7 +35,7 @@ export default function RSVPSection() {
         >
           <p className="font-title text-primary/70 text-xs tracking-[0.5em] uppercase mb-3">Kindly Respond</p>
           <h2 className="font-title text-4xl md:text-6xl font-bold"
-            style={{ color: 'hsl(43 80% 58%)', textShadow: '0 2px 16px hsl(43 80% 40% / 0.4)' }}
+            style={{ color: 'hsl(var(--foreground))', textShadow: '0 2px 16px hsl(var(--foreground) / 0.4)' }}
           >
             RSVP
           </h2>
@@ -54,10 +54,10 @@ export default function RSVPSection() {
         >
           {submitted ? (
             <div className="text-center py-12 border border-primary/20 rounded-lg"
-              style={{ background: 'hsl(345 52% 12%)' }}
+              style={{ background: 'var(--card-gradient)' }}
             >
               <CheckCircle2 className="w-16 h-16 text-primary mx-auto mb-4" />
-              <h3 className="font-title text-2xl font-bold mb-2" style={{ color: 'hsl(43 80% 62%)' }}>
+              <h3 className="font-title text-2xl font-bold mb-2" style={{ color: 'hsl(var(--foreground))' }}>
                 Thank You!
               </h3>
               <p className="font-body text-primary/60 text-sm">
@@ -67,7 +67,7 @@ export default function RSVPSection() {
           ) : (
             <form onSubmit={handleSubmit}
               className="space-y-5 border border-primary/20 rounded-lg p-8"
-              style={{ background: 'hsl(345 52% 12%)' }}
+              style={{ background: 'var(--card-gradient)' }}
             >
               <div>
                 <label className="font-title text-primary/70 text-xs tracking-wider uppercase block mb-2">
@@ -114,8 +114,8 @@ export default function RSVPSection() {
                 className="w-full py-3.5 font-title text-xs tracking-[0.35em] uppercase rounded-sm flex items-center justify-center gap-2 transition-all hover:opacity-90"
                 style={{
                   background: 'linear-gradient(135deg, hsl(43 80% 55%), hsl(43 60% 42%))',
-                  color: 'hsl(345 58% 9%)',
-                  boxShadow: '0 4px 20px hsl(43 80% 40% / 0.3)',
+                  color: 'hsl(var(--background))',
+                  boxShadow: '0 4px 20px hsl(var(--primary) / 0.3)',
                 }}
               >
                 <Send className="w-4 h-4" /> Confirm Presence

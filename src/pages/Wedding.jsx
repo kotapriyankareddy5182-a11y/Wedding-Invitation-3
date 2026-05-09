@@ -25,14 +25,15 @@ function getTimeLeft() {
   };
 }
 
+const cream = '#F3EBE1';
 const gold = '#D4AF37';
 const goldLight = '#F0D060';
 const goldDim = 'rgba(212,175,55,0.55)';
-const bg = '#1a0a12';
-const cardBg = 'rgba(80,20,40,0.55)';
+const bg = '#22071a';
+const cardBg = 'linear-gradient(90deg, #571147 0%, #571147 35%, #3a0b30 35%, #3a0b30 100%)';
 
-const sectionTitle = { color: gold, fontFamily: "'Playfair Display', serif", textShadow: `0 2px 20px rgba(212,175,55,0.35)` };
-const subLabel = { color: goldDim, fontFamily: "'Cinzel', serif", fontSize: '11px', letterSpacing: '0.4em', textTransform: 'uppercase' };
+const sectionTitle = { color: cream, fontFamily: "'Playfair Display', serif", textShadow: `0 2px 20px rgba(243,235,225,0.2)` };
+const subLabel = { color: gold, fontFamily: "'Cinzel', serif", fontSize: '11px', letterSpacing: '0.4em', textTransform: 'uppercase' };
 const divider = (
   <div className="flex items-center justify-center gap-3 my-4">
     <div style={{ height: 1, width: 80, background: `linear-gradient(to right, transparent, ${gold})` }} />
@@ -146,7 +147,7 @@ export default function Wedding() {
   const mapUrl = "https://www.google.com/maps/search/Sita+Rama+Kalyana+Mandapam+Giddalur+Prakasam+District";
 
   return (
-    <div style={{ background: bg, minHeight: '100vh', color: gold, fontFamily: "'EB Garamond', serif" }}>
+    <div style={{ background: bg, minHeight: '100vh', color: cream, fontFamily: "'EB Garamond', serif" }}>
 
       {/* Fixed Buttons */}
       <button onClick={toggleAudio}
@@ -206,7 +207,7 @@ export default function Wedding() {
 
         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2 }}
           className="text-center italic mb-6 z-10"
-          style={{ color: goldDim, fontFamily: "'EB Garamond', serif", fontSize: 16, maxWidth: 340 }}>
+          style={{ color: cream, fontFamily: "'EB Garamond', serif", fontSize: 16, maxWidth: 340 }}>
           Together with our families, we joyfully invite you to celebrate our union
         </motion.p>
 
@@ -272,7 +273,7 @@ export default function Wedding() {
                     </h2>
                   </motion.div>
 
-                  <p className="italic mt-8" style={{ color: goldDim, fontSize: 16 }}>Two families, many traditions, one timeless celebration.</p>
+                  <p className="italic mt-8" style={{ color: cream, fontSize: 16 }}>Two families, many traditions, one timeless celebration.</p>
                   {divider}
                 </div>
 
@@ -300,7 +301,7 @@ export default function Wedding() {
                     </div>
                     <h3 style={{ ...sectionTitle, fontSize: 26, fontFamily: "'Cinzel', serif", letterSpacing: '0.15em' }}>ASHOK</h3>
                     <p style={{ ...subLabel, marginTop: 6 }}>Son of</p>
-                    <p className="mt-1 italic" style={{ color: goldDim, fontSize: 15 }}>Sri Ankireddy &amp; Smt. Lakshmi Devi</p>
+                    <p className="mt-1 italic" style={{ color: cream, fontSize: 15 }}>Sri Ankireddy &amp; Smt. Lakshmi Devi</p>
                   </motion.div>
 
                   {/* Bride */}
@@ -326,7 +327,7 @@ export default function Wedding() {
                     </div>
                     <h3 style={{ ...sectionTitle, fontSize: 26, fontFamily: "'Cinzel', serif", letterSpacing: '0.15em' }}>POOJA</h3>
                     <p style={{ ...subLabel, marginTop: 6 }}>Daughter of</p>
-                    <p className="mt-1 italic" style={{ color: goldDim, fontSize: 15 }}>Sri Ramakrishna Reddy &amp; Smt. Srikala</p>
+                    <p className="mt-1 italic" style={{ color: cream, fontSize: 15 }}>Sri Ramakrishna Reddy &amp; Smt. Srikala</p>
                   </motion.div>
                 </div>
               </div>
@@ -338,7 +339,7 @@ export default function Wedding() {
                 <div className="text-center mb-14">
                   <p style={subLabel}>Wedding Events</p>
                   <h2 style={{ ...sectionTitle, fontSize: 'clamp(28px,6vw,52px)', fontWeight: 600 }}>Celebration Schedule</h2>
-                  <p className="italic mt-2" style={{ color: goldDim, fontSize: 15 }}>Every ritual, every moment — beautifully planned for family and friends.</p>
+                  <p className="italic mt-2" style={{ color: cream, fontSize: 15 }}>Every ritual, every moment — beautifully planned for family and friends.</p>
                   {divider}
                   <p style={{ color: goldDim, fontSize: 13, fontFamily: "'Cinzel', serif", letterSpacing: '0.2em' }}>
                     Sita Rama Kalyana Mandapam, Giddalur, Prakasam District
@@ -356,8 +357,8 @@ export default function Wedding() {
                         <p style={{ ...subLabel, fontSize: 10 }}>{ev.label}</p>
                       </div>
                       <h3 style={{ ...sectionTitle, fontSize: 22, fontFamily: "'Cinzel', serif", textTransform: 'uppercase', letterSpacing: '0.08em' }}>{ev.name}</h3>
-                      <p className="italic mt-2 mb-4" style={{ color: goldDim, fontSize: 14 }}>{ev.desc}</p>
-                      <p style={{ color: gold, fontSize: 13, fontFamily: "'Cinzel', serif" }}>{ev.date}</p>
+                      <p className="italic mt-2 mb-4" style={{ color: cream, fontSize: 14 }}>{ev.desc}</p>
+                      <p style={{ color: cream, fontSize: 13, fontFamily: "'Cinzel', serif" }}>{ev.date}</p>
                       <a href={mapUrl} target="_blank" rel="noopener noreferrer"
                         className="inline-flex items-center gap-1 mt-4 text-xs" style={{ color: gold, fontFamily: "'Cinzel', serif", letterSpacing: '0.15em' }}>
                         GET DIRECTIONS →
@@ -372,7 +373,7 @@ export default function Wedding() {
             <section className="py-20 px-4 text-center">
               <p style={subLabel}>Sacred Muhurat</p>
               <h2 style={{ ...sectionTitle, fontSize: 'clamp(28px,5vw,48px)', fontWeight: 600 }}>Countdown to the Big Day</h2>
-              <p className="italic mt-2 mb-10" style={{ color: goldDim, fontSize: 15 }}>The auspicious moment is getting closer.</p>
+              <p className="italic mt-2 mb-10" style={{ color: cream, fontSize: 15 }}>The auspicious moment is getting closer.</p>
               <div className="flex justify-center gap-4 md:gap-8 flex-wrap">
                 {[['days', 'Days'], ['hours', 'Hours'], ['minutes', 'Minutes'], ['seconds', 'Seconds']].map(([k, l]) => (
                   <CountdownBox key={k} value={timeLeft[k]} label={l} />
@@ -387,7 +388,7 @@ export default function Wedding() {
                 <div className="text-center mb-12">
                   <p style={subLabel}>Captured Chapters</p>
                   <h2 style={{ ...sectionTitle, fontSize: 'clamp(28px,5vw,48px)', fontWeight: 600 }}>Memories in Bloom</h2>
-                  <p className="italic mt-2" style={{ color: goldDim, fontSize: 15 }}>A glimpse of moments leading to our celebration.</p>
+                  <p className="italic mt-2" style={{ color: cream, fontSize: 15 }}>A glimpse of moments leading to our celebration.</p>
                   {divider}
                 </div>
                 {/* Bento grid */}
@@ -414,7 +415,7 @@ export default function Wedding() {
                 <div className="text-center mb-12">
                   <p style={subLabel}>Venue Guide</p>
                   <h2 style={{ ...sectionTitle, fontSize: 'clamp(28px,5vw,48px)', fontWeight: 600 }}>Venue &amp; Live Stream</h2>
-                  <p className="italic mt-2" style={{ color: goldDim, fontSize: 15 }}>Save the date and arrive with ease.</p>
+                  <p className="italic mt-2" style={{ color: cream, fontSize: 15 }}>Save the date and arrive with ease.</p>
                   {divider}
                 </div>
 
@@ -423,7 +424,7 @@ export default function Wedding() {
                   {events.map(ev => (
                     <div key={ev.name} className="px-4 py-2 rounded-full text-center" style={{ border: `1px solid ${goldDim}`, minWidth: 140 }}>
                       <p style={{ color: gold, fontFamily: "'Cinzel', serif", fontSize: 11, letterSpacing: '0.1em' }}>{ev.name.toUpperCase()}</p>
-                      <p style={{ color: goldDim, fontSize: 11 }}>{ev.date.split('·')[1]?.trim()}</p>
+                      <p style={{ color: cream, fontSize: 11 }}>{ev.date.split('·')[1]?.trim()}</p>
                     </div>
                   ))}
                 </div>
@@ -432,8 +433,8 @@ export default function Wedding() {
                   <div className="rounded-2xl p-8 text-center" style={{ background: cardBg, border: `1px solid ${goldDim}` }}>
                     <MapPin size={36} color={gold} className="mx-auto mb-4" />
                     <h3 style={{ ...sectionTitle, fontSize: 22, fontFamily: "'Cinzel', serif" }}>WEDDING VENUE</h3>
-                    <p className="mt-3 italic" style={{ color: goldDim }}>Sita Rama Kalyana Mandapam</p>
-                    <p style={{ color: goldDim, fontSize: 13 }}>Giddalur, Prakasam District</p>
+                    <p className="mt-3 italic" style={{ color: cream }}>Sita Rama Kalyana Mandapam</p>
+                    <p style={{ color: cream, fontSize: 13 }}>Giddalur, Prakasam District</p>
                     <a href={mapUrl} target="_blank" rel="noopener noreferrer"
                       className="inline-flex items-center gap-2 mt-6 px-8 py-3 rounded-full text-xs"
                       style={{ background: `linear-gradient(135deg, ${gold}, #b8860b)`, color: bg, fontFamily: "'Cinzel', serif", letterSpacing: '0.2em' }}>
@@ -443,8 +444,8 @@ export default function Wedding() {
                   <div className="rounded-2xl p-8 text-center" style={{ background: cardBg, border: `1px solid ${goldDim}` }}>
                     <Video size={36} color={gold} className="mx-auto mb-4" />
                     <h3 style={{ ...sectionTitle, fontSize: 22, fontFamily: "'Cinzel', serif" }}>LIVE STREAM</h3>
-                    <p className="mt-3 italic" style={{ color: goldDim }}>Can't make it in person?</p>
-                    <p style={{ color: goldDim, fontSize: 13 }}>Watch the ceremony live on February 25, 2026</p>
+                    <p className="mt-3 italic" style={{ color: cream }}>Can't make it in person?</p>
+                    <p style={{ color: cream, fontSize: 13 }}>Watch the ceremony live on February 25, 2026</p>
                     <a 
                       href="https://youtu.be/KvvKTLWSYaM?si=S1wrCamFgobHgeSd" 
                       target="_blank" 
@@ -465,7 +466,7 @@ export default function Wedding() {
                 <div className="text-center mb-10">
                   <p style={subLabel}>Join the Celebration</p>
                   <h2 style={{ ...sectionTitle, fontSize: 'clamp(28px,5vw,48px)', fontWeight: 600 }}>RSVP &amp; Share</h2>
-                  <p className="italic mt-2" style={{ color: goldDim }}>We would be honored to celebrate this day with you.</p>
+                  <p className="italic mt-2" style={{ color: cream }}>We would be honored to celebrate this day with you.</p>
                   {divider}
                 </div>
 
@@ -473,7 +474,7 @@ export default function Wedding() {
                   <div className="text-center py-14 rounded-2xl" style={{ background: cardBg, border: `1px solid ${goldDim}` }}>
                     <CheckCircle2 size={56} color={gold} className="mx-auto mb-4" />
                     <h3 style={{ ...sectionTitle, fontSize: 26 }}>Thank You!</h3>
-                    <p className="italic mt-2" style={{ color: goldDim }}>We look forward to celebrating with you.</p>
+                    <p className="italic mt-2" style={{ color: cream }}>We look forward to celebrating with you.</p>
                   </div>
                 ) : (
                   <div className="rounded-2xl p-8" style={{ background: cardBg, border: `1px solid ${goldDim}` }}>
@@ -497,7 +498,7 @@ export default function Wedding() {
                       <input value={rsvpName} onChange={e => setRsvpName(e.target.value)}
                         placeholder="Enter your name"
                         className="w-full px-4 py-3 rounded-lg outline-none"
-                        style={{ background: 'rgba(0,0,0,0.4)', border: `1px solid ${goldDim}`, color: gold, fontFamily: "'EB Garamond', serif", fontSize: 16 }} />
+                        style={{ background: 'rgba(0,0,0,0.4)', border: `1px solid ${goldDim}`, color: cream, fontFamily: "'EB Garamond', serif", fontSize: 16 }} />
                     </div>
                     <div className="mb-6">
                       <p style={{ ...subLabel, marginBottom: 8 }}>Message</p>
@@ -505,7 +506,7 @@ export default function Wedding() {
                         placeholder="Blessings for the couple"
                         rows={4}
                         className="w-full px-4 py-3 rounded-lg outline-none resize-none"
-                        style={{ background: 'rgba(0,0,0,0.4)', border: `1px solid ${goldDim}`, color: gold, fontFamily: "'EB Garamond', serif", fontSize: 16 }} />
+                        style={{ background: 'rgba(0,0,0,0.4)', border: `1px solid ${goldDim}`, color: cream, fontFamily: "'EB Garamond', serif", fontSize: 16 }} />
                     </div>
                     <div className="grid grid-cols-2 gap-3">
                       <button onClick={() => rsvpName && setRsvpDone(true)}

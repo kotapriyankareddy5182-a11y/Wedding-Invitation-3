@@ -32,7 +32,7 @@ export default function AudioPlayer() {
       transition={{ delay: 2 }}
       onClick={toggleMute}
       className="fixed top-6 right-6 z-50 w-11 h-11 rounded-full border border-primary/30 flex items-center justify-center transition-colors hover:bg-primary/10"
-      style={{ background: 'hsl(345 52% 13%)', backdropFilter: 'blur(8px)' }}
+      style={{ background: 'hsl(325 52% 13%)', backdropFilter: 'blur(8px)' }}
       aria-label={isMuted ? "Unmute background music" : "Mute background music"}
     >
       {isMuted ? <VolumeX className="w-4 h-4 text-primary" /> : <Volume2 className="w-4 h-4 text-primary" />}

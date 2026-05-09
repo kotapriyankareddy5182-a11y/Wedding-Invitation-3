@@ -29,7 +29,7 @@ export default function FunctionsTimeline() {
                 >
                     <p className="font-title text-primary/70 text-xs tracking-[0.5em] uppercase mb-3">The Celebrations</p>
                     <h2 className="font-title text-4xl md:text-6xl font-bold"
-                        style={{ color: 'hsl(43 80% 58%)', textShadow: '0 2px 16px hsl(43 80% 40% / 0.4)' }}
+                        style={{ color: 'hsl(var(--foreground))', textShadow: '0 2px 16px hsl(var(--foreground) / 0.4)' }}
                     >
                         Wedding Functions
                     </h2>
@@ -59,15 +59,23 @@ export default function FunctionsTimeline() {
                             >
                                 {/* Content */}
                                 <div className={`md:w-1/2 ${idx % 2 === 0 ? 'md:pr-16 md:text-right' : 'md:pl-16 md:text-left'}`}>
-                                    <div className="border border-primary/20 rounded-lg p-6 hover:border-primary/50 transition-colors"
-                                        style={{ background: 'hsl(345 52% 12%)' }}
+                                    <div className="border border-primary/20 rounded-xl p-6 md:p-8 card-gradient text-left transition-colors shadow-lg shadow-black/20"
                                     >
-                                        <p className="font-title text-primary/70 text-xs tracking-widest uppercase mb-1">{fn.date}</p>
-                                        <h3 className="font-title text-3xl md:text-4xl font-bold mb-1"
-                                            style={{ color: 'hsl(43 80% 62%)' }}
-                                        >{fn.name}</h3>
-                                        <p className="font-title text-primary/60 text-xs tracking-wider mb-2">{fn.time}</p>
-                                        <p className="font-body text-primary/55 text-sm">{fn.description}</p>
+                                        <div className="flex items-center gap-4 mb-4">
+                                            <div className="w-12 h-12 rounded-full border border-primary/50 flex items-center justify-center shrink-0">
+                                                <Sparkles className="w-5 h-5 text-primary" />
+                                            </div>
+                                            <p className="font-title text-primary text-xs font-semibold tracking-[0.2em] uppercase">{fn.name === "Wedding" ? "SACRED VOWS" : fn.name.toUpperCase()}</p>
+                                        </div>
+                                        <h3 className="font-title text-3xl md:text-4xl mb-3 text-foreground tracking-wide font-light"
+                                        >
+                                            {fn.name === "Wedding" ? "WEDDING CEREMONY" : fn.name.toUpperCase()}
+                                        </h3>
+                                        <p className="font-body text-foreground/90 italic text-[1.1rem] mb-4 opacity-90">{fn.description}</p>
+                                        <p className="font-body text-foreground/90 mb-6">{fn.date} · {fn.time}</p>
+                                        <button className="font-title text-primary text-xs font-semibold tracking-widest uppercase flex items-center gap-2 hover:opacity-80 transition-opacity">
+                                            GET DIRECTIONS <span className="text-lg leading-none">→</span>
+                                        </button>
                                     </div>
                                 </div>
 
