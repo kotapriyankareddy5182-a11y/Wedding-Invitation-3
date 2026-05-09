@@ -25,12 +25,13 @@ function getTimeLeft() {
   };
 }
 
+const creamYellow = '#FDE8B5';
 const cream = '#F3EBE1';
 const gold = '#D4AF37';
 const goldLight = '#F0D060';
 const goldDim = 'rgba(212,175,55,0.55)';
-const bg = '#22071a';
-const cardBg = 'linear-gradient(90deg, #571147 0%, #571147 35%, #3a0b30 35%, #3a0b30 100%)';
+const bg = '#45233a';
+const cardBg = 'linear-gradient(90deg, #7a4267 0%, #7a4267 35%, #562c47 35%, #562c47 100%)';
 
 const sectionTitle = { color: cream, fontFamily: "'Playfair Display', serif", textShadow: `0 2px 20px rgba(243,235,225,0.2)` };
 const subLabel = { color: gold, fontFamily: "'Cinzel', serif", fontSize: '11px', letterSpacing: '0.4em', textTransform: 'uppercase' };
@@ -165,7 +166,7 @@ export default function Wedding() {
 
       {/* ═══════════════ HERO ═══════════════ */}
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-4"
-        style={{ background: `radial-gradient(ellipse 80% 70% at 50% 50%, #571147 0%, ${bg} 100%)` }}>
+        style={{ background: `radial-gradient(ellipse 80% 70% at 50% 50%, #7a4267 0%, ${bg} 100%)` }}>
         {/* geometric lines */}
         <div className="absolute inset-0 opacity-10 pointer-events-none" style={{
           backgroundImage: `repeating-linear-gradient(45deg, ${gold} 0, ${gold} 1px, transparent 0, transparent 50%)`,
@@ -193,8 +194,8 @@ export default function Wedding() {
         {/* Names in script */}
         <motion.div initial={{ opacity: 0, scale: 0.85 }} animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 1.4, duration: 1.2 }} className="text-center z-10 my-2">
-          <h1 style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic', fontSize: 'clamp(52px,12vw,110px)', fontWeight: 400, color: cream, textShadow: `0 2px 30px rgba(243,235,225,0.3)`, lineHeight: 1.1 }}>
-            Pooja<span style={{ fontWeight: 300, color: gold }}> &amp; </span>Ashok
+          <h1 style={{ fontFamily: "'Playfair Display', serif", fontStyle: 'italic', fontSize: 'clamp(52px,12vw,110px)', fontWeight: 400, color: creamYellow, textShadow: `0 2px 30px rgba(253,232,181,0.3)`, lineHeight: 1.1 }}>
+            Pooja<span style={{ fontWeight: 300, color: creamYellow }}> &amp; </span>Ashok
           </h1>
         </motion.div>
 
@@ -218,7 +219,7 @@ export default function Wedding() {
             initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 2.2 }}
             whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
             className="px-10 py-3 rounded-full z-10 mt-2"
-            style={{ background: `linear-gradient(135deg, ${gold}, #b8860b)`, color: bg, fontFamily: "'Cinzel', serif", fontSize: 12, letterSpacing: '0.3em', boxShadow: `0 4px 28px rgba(212,175,55,0.4)` }}>
+            style={{ background: creamYellow, color: bg, fontFamily: "'Cinzel', serif", fontSize: 12, letterSpacing: '0.3em', boxShadow: `0 4px 28px rgba(253,232,181,0.4)` }}>
             OPEN INVITATION
           </motion.button>
         )}
@@ -261,8 +262,8 @@ export default function Wedding() {
                         fontFamily: "'Playfair Display', serif", 
                         fontSize: 'clamp(36px, 7vw, 64px)', 
                         fontWeight: 600, 
-                        color: gold,
-                        textShadow: `0 2px 20px rgba(212,175,55,0.4)`,
+                        color: creamYellow,
+                        textShadow: `0 2px 20px rgba(253,232,181,0.4)`,
                         marginTop: '2rem'
                       }}
                       className="leading-none flex items-center justify-center gap-3"
