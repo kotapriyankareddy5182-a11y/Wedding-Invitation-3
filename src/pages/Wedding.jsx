@@ -97,13 +97,13 @@ export default function Wedding() {
         // After the initial smooth scroll finishes, start the slow continuous scroll
         setTimeout(() => {
           scrollInterval = setInterval(() => {
-            window.scrollBy({ top: 1, left: 0 });
+            window.scrollBy({ top: 2, left: 0 });
             
             // Stop automatically if we reach the very bottom of the page
             if (Math.ceil(window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
                clearInterval(scrollInterval);
             }
-          }, 30); // 30ms interval = gentle, readable scrolling speed
+          }, 15); // 15ms interval, 2px scroll = faster, smooth scrolling speed
         }, 1200);
 
       }, 500);
@@ -142,7 +142,7 @@ export default function Wedding() {
     setMuted(!muted);
   };
 
-  const whatsappUrl = `https://wa.me/91739676920?text=${encodeURIComponent("Hi, I am excited to attend Pooja and Ashok's wedding!")}`;
+  const whatsappUrl = `https://wa.me/917396756920?text=${encodeURIComponent("Hi, I am excited to attend Pooja and Ashok's wedding!")}`;
   const mapUrl = "https://www.google.com/maps/search/Sita+Rama+Kalyana+Mandapam+Giddalur+Prakasam+District";
 
   return (
@@ -182,7 +182,7 @@ export default function Wedding() {
           initial={{ y: -300, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ type: 'spring', bounce: 0.4, duration: 1.8 }}
-          className="w-28 h-28 md:w-36 md:h-36 object-contain mb-2 z-10"
+          className="w-28 h-28 md:w-36 md:h-36 object-cover rounded-full mb-2 z-10"
           style={{ filter: `drop-shadow(0 0 30px rgba(212,175,55,0.5)) brightness(1.1) contrast(1.05)`, mixBlendMode: 'screen' }}
         />
 
