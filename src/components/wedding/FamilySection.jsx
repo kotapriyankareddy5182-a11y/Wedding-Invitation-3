@@ -1,67 +1,83 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Heart } from 'lucide-react';
 
-export default function CircleFrame({ imageUrl, name, parents, label, delay = 0, imagePosition = "object-center" }) {
+export default function FamilySection() {
+  const families = [
+    {
+      side: "Bride's Family",
+      parents: [
+        { name: "Sri Ramakrishna Reddy", role: "Father of the Bride" },
+        { name: "Smt. Srikala", role: "Mother of the Bride" },
+      ]
+    },
+    {
+      side: "Groom's Family",
+      parents: [
+        { name: "Sri Ankireddy", role: "Father of the Groom" },
+        { name: "Smt. Lakshmi Devi", role: "Mother of the Groom" },
+      ]
+    }
+  ];
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 60 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.8, delay, ease: "easeOut" }}
-      className="flex flex-col items-center"
-    >
-      <div className="relative group flex justify-center items-center">
-        {/* Outer gold glow */}
-        <div className="absolute -inset-4 bg-primary/10 rounded-full blur-xl opacity-40 group-hover:opacity-80 transition-opacity duration-700" />
-
-        {/* The rotating circle frame container */}
-        <div className="relative w-64 h-64 md:w-72 md:h-72 flex justify-center items-center">
-          
-          {/* Rotating decorative borders */}
-          <motion.div 
-            animate={{ rotate: 360 }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            className="absolute inset-0 rounded-full border-[3px] border-dashed border-primary opacity-60"
-          />
-          <motion.div 
-            animate={{ rotate: -360 }}
-            transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-            className="absolute inset-[-10px] rounded-full border-[1px] border-primary opacity-30"
-          />
-          <motion.div 
-            animate={{ rotate: 360 }}
-            transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-            className="absolute inset-2 rounded-full border-2 border-dotted border-primary opacity-50"
-          />
-
-          {/* The Circular Image */}
-          <div className="relative w-56 h-56 md:w-64 md:h-64 rounded-full overflow-hidden border-[4px] border-primary/40 group-hover:scale-105 transition-transform duration-700 z-10">
-            <img
-              src={imageUrl}
-              alt={name}
-              className={`w-full h-full object-cover ${imagePosition}`}
-            />
-            {/* Golden gradient overlay inside circle */}
-            <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-primary/10" />
+    <section className="py-20 md:py-32 bg-secondary/30">
+      <div className="max-w-5xl mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 1 }}
+          className="text-center mb-16"
+        >
+          <p className="font-title text-primary/70 text-xs tracking-[0.5em] uppercase mb-3">With Blessings Of</p>
+          <h2 className="font-title text-4xl md:text-6xl font-bold"
+            style={{ color: 'hsl(43 80% 58%)', textShadow: '0 2px 16px hsl(43 80% 40% / 0.4)' }}
+          >
+            Our Families
+          </h2>
+          <div className="flex items-center justify-center gap-3 mt-4">
+            <div className="w-16 h-px bg-primary/50" />
+            <Heart className="w-4 h-4 text-primary fill-primary" />
+            <div className="w-16 h-px bg-primary/50" />
           </div>
-          
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {families.map((family, idx) => (
+            <motion.div
+              key={family.side}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: idx * 0.2 }}
+              className="text-center"
+            >
+              <div className="inline-block px-6 py-2 border border-primary/40 rounded-sm mb-8">
+                <p className="font-title text-primary text-xs tracking-[0.3em] uppercase">{family.side}</p>
+              </div>
+
+              <div className="space-y-8">
+                {family.parents.map((parent) => (
+                  <div key={parent.name}>
+                    <div className="w-20 h-20 mx-auto mb-3 rounded-full border-2 border-primary/40 flex items-center justify-center"
+                      style={{ background: 'hsl(345 52% 15%)' }}
+                    >
+                      <span className="font-title text-primary text-2xl font-bold">
+                        {parent.name.split(' ').find(w => w.length > 2)?.[0] ?? parent.name[0]}
+                      </span>
+                    </div>
+                    <h4 className="font-title text-xl md:text-2xl font-semibold" style={{ color: 'hsl(43 80% 62%)' }}>
+                      {parent.name}
+                    </h4>
+                    <p className="font-body text-primary/55 text-xs tracking-wider mt-1">{parent.role}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
-
-      {/* Name and details */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ delay: delay + 0.3, duration: 0.6 }}
-        className="text-center mt-8 relative z-20"
-      >
-        <p className="font-cormorant text-primary/80 text-xs md:text-sm tracking-[0.4em] uppercase mb-1">{label}</p>
-        <h3 className="font-vibes text-4xl md:text-5xl text-primary text-glow mb-3 capitalize">
-          <span className="font-playfair">{name.charAt(0)}</span>{name.slice(1)}
-        </h3>
-        <p className="font-cormorant text-muted-foreground text-sm tracking-wide capitalize">{parents}</p>
-      </motion.div>
-    </motion.div>
+    </section>
   );
 }

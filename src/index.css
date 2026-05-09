@@ -6,43 +6,43 @@
 
 @layer base {
   :root {
-    /* Background: deep grape wine / maroon */
-    --background: 345 58% 9%;
+    /* Background: Blackberry */
+    --background: 314 67% 20%;
     /* Foreground: GOLD only — no white */
     --foreground: 43 75% 62%;
-    /* Card: slightly lighter maroon */
-    --card: 345 52% 12%;
+    /* Card: slightly lighter blackberry */
+    --card: 314 60% 23%;
     --card-foreground: 43 75% 62%;
-    --popover: 345 52% 12%;
+    --popover: 314 60% 23%;
     --popover-foreground: 43 75% 62%;
     /* Primary: bright burnished gold */
     --primary: 43 80% 58%;
-    --primary-foreground: 345 58% 9%;
-    /* Secondary: mid maroon */
-    --secondary: 345 45% 17%;
+    --primary-foreground: 314 67% 20%;
+    /* Secondary: mid blackberry */
+    --secondary: 314 50% 28%;
     --secondary-foreground: 43 75% 62%;
     /* Muted: dim gold */
-    --muted: 345 38% 18%;
+    --muted: 314 45% 28%;
     --muted-foreground: 43 50% 52%;
-    /* Accent: deep wine */
-    --accent: 345 62% 20%;
+    /* Accent: deep blackberry */
+    --accent: 314 70% 30%;
     --accent-foreground: 43 75% 62%;
     --destructive: 0 70% 45%;
     --destructive-foreground: 43 75% 62%;
     --border: 43 55% 38%;
-    --input: 345 42% 20%;
+    --input: 314 50% 30%;
     --ring: 43 80% 58%;
     --chart-1: 43 80% 58%;
-    --chart-2: 345 55% 18%;
-    --chart-3: 345 60% 30%;
+    --chart-2: 314 55% 28%;
+    --chart-3: 314 60% 40%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
-    --sidebar-background: 345 58% 7%;
+    --sidebar-background: 314 67% 18%;
     --sidebar-foreground: 43 75% 62%;
     --sidebar-primary: 43 80% 58%;
-    --sidebar-primary-foreground: 345 58% 9%;
-    --sidebar-accent: 345 45% 17%;
+    --sidebar-primary-foreground: 314 67% 20%;
+    --sidebar-accent: 314 50% 28%;
     --sidebar-accent-foreground: 43 75% 62%;
     --sidebar-border: 43 55% 28%;
     --sidebar-ring: 43 80% 58%;
@@ -53,35 +53,35 @@
   }
 
   .dark {
-    --background: 345 58% 7%;
+    --background: 314 67% 20%;
     --foreground: 43 75% 62%;
-    --card: 345 50% 11%;
+    --card: 314 60% 23%;
     --card-foreground: 43 72% 82%;
-    --popover: 345 50% 11%;
+    --popover: 314 60% 23%;
     --popover-foreground: 43 72% 82%;
     --primary: 43 70% 55%;
-    --primary-foreground: 345 55% 8%;
-    --secondary: 345 45% 15%;
+    --primary-foreground: 314 67% 20%;
+    --secondary: 314 50% 28%;
     --secondary-foreground: 43 72% 82%;
-    --muted: 345 35% 16%;
+    --muted: 314 45% 28%;
     --muted-foreground: 43 30% 58%;
-    --accent: 345 60% 18%;
+    --accent: 314 70% 30%;
     --accent-foreground: 43 72% 82%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     --border: 43 50% 30%;
-    --input: 345 40% 18%;
+    --input: 314 50% 30%;
     --ring: 43 70% 55%;
     --chart-1: 43 70% 55%;
-    --chart-2: 345 55% 18%;
-    --chart-3: 345 60% 30%;
+    --chart-2: 314 55% 28%;
+    --chart-3: 314 60% 40%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --sidebar-background: 345 55% 7%;
+    --sidebar-background: 314 67% 18%;
     --sidebar-foreground: 43 72% 82%;
     --sidebar-primary: 43 70% 55%;
-    --sidebar-primary-foreground: 345 55% 8%;
-    --sidebar-accent: 345 45% 14%;
+    --sidebar-primary-foreground: 314 67% 20%;
+    --sidebar-accent: 314 50% 28%;
     --sidebar-accent-foreground: 43 72% 82%;
     --sidebar-border: 43 50% 25%;
     --sidebar-ring: 43 70% 55%;
@@ -104,7 +104,7 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(345 55% 8%);
+  background: hsl(314 67% 18%);
 }
 
 ::-webkit-scrollbar-thumb {
