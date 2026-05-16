@@ -144,7 +144,7 @@ export default function Wedding() {
     setMuted(!muted);
   };
 
-  const whatsappUrl = `https://wa.me/917396756920?text=${encodeURIComponent("hi i like this templete i want invitation like this i want this message")}`;
+  const whatsappUrl = `https://wa.me/917396756920?text=${encodeURIComponent("hi i like this templete and i want this type of templete")}`;
   const mapUrl = "https://www.google.com/maps/search/Sita+Rama+Kalyana+Mandapam+Giddalur+Prakasam+District";
 
   return (
